@@ -1,0 +1,7 @@
+<div class="app-body bg-light w-100 p-5">
+  <app-courses-filter (courseTypeChanged)="filteredValue = $event" [allCoursesLength]='coursesComp.allCoursesLength'
+    [premiumCoursesLength]='coursesComp.premiumCoursesLength' [freeCoursesLength]='coursesComp.freeCoursesLength'>
+  </app-courses-filter>
+  <app-courses [type]="filteredValue" [searchValue]="searchValue">
+  </app-courses>
+</div>

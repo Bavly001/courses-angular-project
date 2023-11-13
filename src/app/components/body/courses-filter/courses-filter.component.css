@@ -1,0 +1,4 @@
+.btn-hover:hover {
+  background-color: var(--bs-btn-bg) !important;
+  cursor: default;
+}

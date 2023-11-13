@@ -1,0 +1,16 @@
+<div class="w-100 d-flex justify-content-center align-items-center mb-3">
+  <div
+    class="w-75 d-flex justify-content-between align-items-center flex-wrap flex-column flex-sm-column flex-md-row flex-lg-row">
+    <p class="fw-bold">
+      Course Types:
+    </p>
+    <div
+      class="w-75 d-flex justify-content-around align-items-center flex-wrap flex-column flex-sm-column flex-md-row flex-lg-row">
+      <p class="btn rounded-pill w-25"
+        [ngClass]="{'btn-dark btn-hover': type === courseType,'btn-outline-dark': type !== courseType }"
+        *ngFor="let type of coursesTypes" (click)="changeType(type)">
+        {{type}}
+        <span>({{type==='All'?allCoursesLength:type==='Premium'?premiumCoursesLength:freeCoursesLength}})</span></p>
+    </div>
+  </div>
+</div>

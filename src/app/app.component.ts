@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'main-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'first-angular-project';
+  searchValue: string = '';
+
+  changeSearchValue(value: any) {
+    this.searchValue = value;
+  }
 }

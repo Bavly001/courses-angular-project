@@ -1,0 +1,30 @@
+<div class="col d-flex justify-content-center align-items-center w-100 h-100">
+  <div class="card text-start w-75 shadow-sm overflow-hidden">
+    <div class="img-frame w-100 overflow-hidden d-flex justify-content-center align-items-center">
+      <img class="w-100" src={{course.image}} alt="Title">
+    </div>
+    <div class="card-body">
+      <h4 class="card-title fw-bold text-truncate">{{course.name}}</h4>
+      <p class="card-text text-truncate">{{course.description}}</p>
+      <p class="card-text text-truncate">Rating: {{course.ratings}}</p>
+      <div class="w-75 d-flex justify-content-between">
+
+
+
+        <!-- ONLY For Trying Attribute Directives -->
+        <p [appClass]="{'text-danger':course.type === 'Premium' }">{{course.type}}</p>
+        <!-- <p [ngClass]="{'text-danger':course.type === 'Premium' }">{{course.type}}</p> -->
+
+
+        <!-- ONLY For Trying Structural Directives -->
+        <p *appIf="course.type !== 'Free'">Price: {{course.price}}$</p>
+        <!-- <p [hidden]="course.type === 'Free'">Price: {{course.price}}$</p> -->
+
+      </div>
+      <div class="w-100 mb-2 d-flex justify-content-between">
+        <button class="btn btn-dark rounded-pill w-75">{{ course.type !== "Free" ? 'Buy Now' : 'Get Now'}}</button>
+        <button class="btn btn-outline-secondary rounded-pill info-button">Info</button>
+      </div>
+    </div>
+  </div>
+</div>

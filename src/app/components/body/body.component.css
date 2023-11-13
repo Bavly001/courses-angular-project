@@ -1,0 +1,4 @@
+.app-body {
+  min-height: calc(100vh - (80px + 60px));
+  overflow-x: hidden !important;
+}
